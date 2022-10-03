@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import InputField from './InputField'
 
-function App() {
+const App: React.FC = () => {
+const [todo, setTodo] = useState<string>("");
+
   return (
     <div className="App">
-
+    <span className="heading">Taskify</span>
+    <InputField todo={todo} setTodo={setTodo} />
     </div>
   );
 }
